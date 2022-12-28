@@ -1,0 +1,166 @@
+:root {
+  --first-background: #555555;
+  --second-background: linear-gradient(45deg, gray 35%, #DDDDDD);
+  --first-text-color: black;
+  --second-text-color: white;
+}
+
+::selection {
+  background-color: var(--first-background);
+  color: var(--second-text-color);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*::before, *::after, * {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62,5%;
+  font-family: Lobster, serif;
+}
+
+body {
+  min-width: 500px;
+  overflow-x: hidden;
+}
+
+nav {
+  background: var(--second-background);
+  position: sticky;
+  width: 100%;
+  height: 10%;
+  top: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+ul li {
+  display: inline-block;
+}
+
+li a {
+  color: var(--second-text-color);
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 10px;
+}
+
+li a:hover {
+  background: var(--first-background);
+  border-radius: 10px;
+}
+
+.welcome-section {
+  height: 100vh;
+  width: 100%;
+  background-image: url('https://images.pexels.com/photos/52500/horse-herd-fog-nature-52500.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); /*Credit to Pixabay*/
+  background-size: cover;
+  font-size: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-section h1, .welcome-section p {
+  animation: slow 10s ease;
+}
+
+@keyframes slow {
+  from {
+    opacity: 0%;
+  }
+  to {
+   opacity: 100%;
+  }
+}
+
+.projects-section {
+  font-size: 2rem;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.project-font {
+  font-family: Flavors;
+}
+
+.project-tile {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+a {
+  text-decoration: none;
+  color: var(--first-text-color);
+}
+
+img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  margin: 0 25px;
+  margin-top: 35px;
+  border-radius: 20px;
+}
+
+.code {
+  opacity: 0%;
+  color: brown;
+}
+
+.project-tile a:hover .code {
+  opacity: 100%;
+}
+
+.contact h3 {
+  padding-top: 30px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact p {
+  padding-bottom: 30px;
+  font-size: 1.5rem;
+}
+
+.contact a {
+  color: var(--first-text-color);
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 10px;
+  display: inline-block;
+  transition: .3s;
+}
+
+.contact a:hover {
+  border-radius: 10px;
+  transform: translateY(8px);
+}
+
+footer {
+  background: var(--second-background);
+  padding: 10px;
+  margin-top: 40px;
+  font-size: 1.2rem;
+  text-align: right;
+}
+
+@media only screen and (max-width: 300px){
+  html {
+    font-size: 62%;
+  }
+}
